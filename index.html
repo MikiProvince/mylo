@@ -4,45 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
     <title>CapsMike</title>
 </head>
 <body>
-    <div class="logo0">
-        <span>M</span><span>Y</span><span>L</span><span>O</span><span style="font-family: 'poppins', sans-serif; font-size: 2vw;">caps</span>
-    </div>
-    <div class="logo1">
-        <span>M</span><span>Y</span><span>L</span><span>O</span><span style="font-family: 'poppins', sans-serif; font-size: 2vw;">caps</span>
-    </div>
-    <div class="logo2">
-        <span>M</span><span>Y</span><span>L</span><span>O</span><span style="font-family: 'poppins', sans-serif; font-size: 2vw;">caps</span>
-    </div>
-    <div class="logo3">
-        <span>M</span><span>Y</span><span>L</span><span>O</span><span style="font-family: 'poppins', sans-serif; font-size: 2vw;">caps</span>
-    </div>
-    <div class="logo4">
-        <span>M</span><span>Y</span><span>L</span><span>O</span><span style="font-family: 'poppins', sans-serif; font-size: 2vw;">caps</span>
-    </div>
-    <div class="logo5">
-        <span>M</span><span>Y</span><span>L</span><span>O</span><span style="font-family: 'poppins', sans-serif; font-size: 2vw;">caps</span>
-    </div>
-    <div class="logo6">
-        <span>M</span><span>Y</span><span>L</span><span>O</span><span style="font-family: 'poppins', sans-serif; font-size: 2vw;">caps</span>
-    </div>
-    <div class="logo7">
-        <span>M</span><span>Y</span><span>L</span><span>O</span><span style="font-family: 'poppins', sans-serif; font-size: 2vw;">caps</span>
-    </div>
+    <header>
+        <div class="logo">
+            <img src="img/cap-logo.png" alt="">
+            <div class="logoText">
+                <span>M</span><span>Y</span><span>L</span><span>O</span><span style="font-family: 'poppins', sans-serif; font-size: 0.5em;">caps</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">catalog</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <img class="cap0" src="img/cap-white.png" alt="">
-    <img class="cap1" src="img/cap-white.png" alt="">
-    <img class="cap2" src="img/cap-white.png" alt="">
-    <img class="cap3" src="img/cap-white.png" alt="">
-    <img class="cap4" src="img/cap-white.png" alt="">
-    <img class="cap5" src="img/cap-white.png" alt="">
-    <img class="cap6" src="img/cap-white.png" alt="">
-    <img class="cap7" src="img/cap-white.png" alt="">
-    <!-- <img class="shadow" src="./img/shadow.png" alt=""> -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <section>
+        <div class="big">
+            <img class="big__cap" src="img/big-cap.png" alt="">
+        </div>
+        <div class="leaves">
+            <ul id="scene">
+                <li class="layer" data-depth="-.1">
+                    <img src="img/leave01.png" alt="">
+                </li>
+                <li class="layer" data-depth="-.3">
+                    <img src="img/leave02.png" alt="">
+                </li>
+                <li class="layer" data-depth="-1.5">
+                    <img src="img/leave03.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+
+    <script>
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene, {
+            relativeInput: true
+        });
+    </script>
 </body>
 </html>
