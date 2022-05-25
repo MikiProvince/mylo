@@ -74,8 +74,8 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, left bottom, from(#355c7d), color-stop(#6c5b7b), color-stop(#84374d), to(#2a030e));
-  background: linear-gradient(to bottom, #355c7d, #6c5b7b, #84374d, #2a030e);
+  background: -webkit-gradient(linear, left bottom, left top, from(#eaeaea), color-stop(#dbdbdb), color-stop(#f2f2f2), to(#ada996));
+  background: linear-gradient(to top, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
 }
 
 header {
@@ -268,21 +268,17 @@ nav ul li a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 65vw;
+  width: 60vw;
+  z-index: 1;
 }
 
 .leaves {
-  width: 30%;
+  width: 100%;
   height: 100vh;
   position: absolute;
   top: 35%;
   left: 55%;
-  z-index: 2;
 }
-
-/* .leaves .layer img {
-  width: 50px;
-} */
 
 .leaves .layer:nth-child(1) {
   position: absolute;
@@ -294,6 +290,7 @@ nav ul li a {
   position: absolute;
   top: -10px !important;
   left: -320px !important;
+  z-index: -1;
 }
 
 .leaves .layer:nth-child(3) {
